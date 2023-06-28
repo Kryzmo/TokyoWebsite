@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+	<head>
+		<title>{{title}}</title>
+		<link rel="icon" type="image/x-icon" href="{{logo}}" />
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1;, shrink-to-fit=yes"
+		/>
+		<link rel="stylesheet" href="{% static 'css/semantic.min.css' %}" />
+		<link rel="stylesheet" href="{% static 'css/index.css' %}" />
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script
+			src="https://kit.fontawesome.com/58242346d9.js"
+			crossorigin="anonymous"
+		></script>
+		<script src="{% static 'js/navbar.js' %}"></script>
+		<link
+			rel="stylesheet"
+			href="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/assets/owl.carousel.min.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/assets/owl.theme.default.min.css"
+		/>
+	</head>
+	<body>
+		<div class="container-TI">
+			<div class="main-column-TI">
+				<div
+					style="box-shadow: none;border: hidden; margin-top: 0;margin-bottom: 0; padding-top: 0;z-index: 10000; display: flex; align-items: center; width: 100%;"
+					class="ui static borderless huge menu"
+				>
+					<div class="ui container grid">
+						<div class="computer only row" style="padding-bottom: 30px;">
+							<a style="color: white; z-index: 9;" href="/" class="header item">
+								<img class="navbar-logo-pc-TI" src="{{logo}}" />
+							</a>
+
+							<a href="/" id="navbar-hyperlink-TI" class="item"
+								><span id="navbar-items-TI">Strona główna</span></a
+							>
+							<a href="/anime" id="navbar-hyperlink-TI" class="item"
+								><span id="navbar-items-TI">Anime</span></a
+							>
+						</div>
+						<!-- Mobilne -->
+						<div class="tablet mobile only row">
+							<a style="color: #fff" class="item left" href="/">
+								<img class="navbar-logo-mobile-TI" src="{{logo}}" />
+							</a>
+							<div id="mobile-bar" class="ui bottom fixed menu">
+								<a id="mobile-items" href="/search" class="item">
+									<i id="sidebar-icons" class="fa-solid fa-list"></i>
+									Strona główna
+								</a>
+								<a id="mobile-items" href="/ekipa" class="item">
+									<i id="sidebar-icons" class="fa-solid fa-people-group"></i>
+									Anime
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				{% block content %}
+				<div>
+					<div class="carousel_left_arrow_div">
+						<a class="owl-prev"
+							><svg
+								class="carousel_arrows"
+								viewBox="0 0 24 24"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<path fill="white" d="{{ angle_left }}" />
+							</svg>
+						</a>
+					</div>
+					<div class="carousel_right_arrow_div">
+						<button class="owl-next"
+							><svg
+								class="carousel_arrows"
+								viewBox="0 0 24 24"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<path fill="white" d="{{ angle_right }}" />
+							</svg>
+						</button>
+					</div>
+				</div>
+				<div class="owl-carousel">
+					{% for main in main_new_episodes.object_list %}
+					<div class="item" id="carousel-item">
+						<div></div>
+						<div class="carousel-label">
+							<span class="main-carousel-span">
+								Nowy odcinek {{main.anime.name}}!
+							</span>
+						</div>
+						<div class="carousel-image">
+							<img
+								style="width:100%; height: 100%;"
+								src="{{ MEDIA_URL }}/{{main.image}}"
+								id="kocham-julke"
+							/>
+						</div>
+						<div></div>
+					</div>
+					{% endfor %}
+				</div>
+				<script type="text/javascript" src="{% static 'js/owl.carousel.js' %}"></script>
+				<script type="text/javascript" src="{% static 'js/owl.js' %}"></script>
+
+				<div class="news">
+				<h1>ugabnuga</h1>
+				</div>
+				{% endblock %}
+			</div>
+		</div>
+		<div class="footer-TI">Stopka</div>
+	</body>
+</html>

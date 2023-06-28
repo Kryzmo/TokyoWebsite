@@ -1,0 +1,248 @@
+html,
+body {
+	background: #070508 !important;
+	margin: 0;
+}
+
+.container-TI {
+	position: relative;
+	min-height: 100vh;
+}
+
+.main-column-TI {
+	/* display: flex; */
+	/* justify-content: center; */
+	align-items: center;
+	display: grid;
+	place-items: center;
+	margin-right: auto;
+	margin-left: auto;
+	background-color: aqua;
+	height: 100vw;
+	max-width: 1550px;
+	position: relative;
+}
+
+.ui.static.borderless.huge.menu {
+	background-color: #070508;
+	position: absolute;
+	top: 0;
+	border-radius: 0;
+	height: 170px;
+}
+
+@media only screen and (max-width: 990px) {
+	.ui.static.borderless.huge.menu {
+		height: 75px;
+	}
+	.owl-carousel {
+		/* margin-top: 75px!important; */
+		position: absolute!important;
+		top: 75px!important;
+	}
+	#carousel-item {
+		grid-template-columns: 1fr!important;
+		grid-template-rows: auto;
+		width: 75%!important;
+		margin-right: auto;
+		margin-left: auto;
+		
+	}
+	.carousel-label {
+		grid-row: 1;
+	}
+	.carousel-image {
+		grid-row: 2;
+	}
+	.carousel_right_arrow_div {
+		top: 250px!important;
+	}
+	.carousel_left_arrow_div {
+		top: 250px!important;
+	}
+	.news {
+		top: 453px!important;
+	}
+}
+.ui.container.grid {
+	width: 90% !important;
+}
+#navbar-items-TI {
+	color: white;
+	font-family: Raleway-Light;
+	font-size: 20px;
+	letter-spacing: 0.04em;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	padding-right: 15px;
+	padding-left: 15px;
+	border-radius: 10px;
+	transition: all ease-in-out 0.3s;
+}
+
+#navbar-items-TI:hover {
+	background-color: #771515;
+}
+
+#navbar-hyperlink-TI {
+	padding-right: 2px;
+	padding-left: 2px;
+}
+
+.navbar-logo-pc-TI {
+	width: 70px !important;
+	height: 70px !important;
+}
+
+.navbar-logo-mobile-TI {
+	width: 60px !important;
+	height: 60px !important;
+}
+
+#mobile-bar {
+	background-color: #1b1c1d;
+	justify-content: center;
+	position: fixed;
+	margin-bottom: 0px;
+	bottom: -1px;
+	left: 0;
+	right: 0;
+	background-color: #1b1c1d;
+	transition: bottom 0.3s ease-out;
+}
+
+#mobile-items {
+	display: inline-grid;
+	color: white;
+	text-align: center;
+}
+
+.ui.bottom.fixed.menu {
+	-webkit-transition: all 0.3s ease-out;
+	-moz-transition: all 0.3s ease-out;
+	-o-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
+}
+
+.ui.bottom.fixed.menu.hidden {
+	transform: translateY(100%);
+}
+
+.footer-TI {
+	clear: both;
+	background-color: #af115b;
+	display: inline-block;
+	margin-bottom: -6px;
+	width: 100%;
+	height: 50px;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	text-align: center;
+}
+
+@font-face {
+	font-family: Raleway-Light;
+	src: url("/static/fonts/Raleway-Light.ttf");
+}
+
+#carousel-item {
+	width: 100%;
+	display: grid;
+	place-items: center;
+	grid-template-columns: 13% repeat(2, 1fr) 13%;
+	height: 377px;
+	background-color: #0b090c;
+}
+
+.owl-carousel {
+	position: absolute!important;
+    top: 170px;
+	max-width: 1550px;
+	max-height: 378px;
+	background: #0b090c;
+}
+
+.main-carousel-span {
+	font-family: Raleway-Light;
+	color: #fff;
+	font-size: 25px;
+}
+
+#kocham-julke {
+	width: 100%;
+	height: 100%
+}
+
+.carousel-image {
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+    height: 100%;
+}
+
+.carousel-image::before,
+.carousel-image::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 50%;
+	background: linear-gradient(to right, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0));
+	mask-image: linear-gradient(
+		to right,
+		rgba(0, 0, 0, 0.85),
+		rgba(0, 0, 0, 0)
+	);
+}
+
+.carousel-image::after {
+	right: 0;
+	left: auto;
+	background: linear-gradient(to left, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0));
+	mask-image: linear-gradient(
+		to left,
+		rgba(0, 0, 0, 0.85),
+		rgba(0, 0, 0, 0)
+	);
+}
+
+.carousel-image img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+.carousel_arrows {
+	height: 30px;
+}
+
+.carousel_left_arrow_div {
+	position: absolute;
+    z-index: 20000;
+    left: 4%;
+    top: 340px;
+}
+
+.carousel_right_arrow_div {
+	position: absolute;
+    z-index: 20000;
+    right: 4%;
+    top: 340px;
+}
+
+.owl-prev,
+.owl-next {
+	background: none;
+	outline: none;
+	border: none;
+	cursor: pointer
+}
+
+.news {
+	width: 100%;
+	background-color: #070508;
+	/* max-width: 200px; */
+	top: 548px;
+    position: absolute;
+}
